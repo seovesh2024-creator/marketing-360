@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding and Strategy - Marketing 360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>BRANDING AND STRATEGY</h1>
+        <div class="hero-divider"></div>
+        <div class="hero-metadata">
+            <div class="hero-location">
+                <span style="display: block;">SERVICE FOCUS</span>
+                <span style="display: block; margin-top: 8px;">IDENTITY & GROWTH</span>
+            </div>
+            <div class="hero-role">
+                <span style="display: block;">STRATEGIC</span>
+                <span style="display: block;">DESIGN &</span>
+                <span style="display: block; margin-top: 8px;">MARKET POSITIONING</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <div class="overview-container">
+            <p class="overview-intro">WHAT WE DO</p>
+            <p class="overview-text">
+                We craft compelling brand identities that resonate with your target audience and set you apart from the competition. Our strategic approach combines market research, creative excellence, and digital innovation to build brands that drive real business results.
+            </p>
+            <div class="overview-stats">
+                <div class="stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Brands Transformed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Industry Awards</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-section">
+        <h2 class="services-title">OUR SERVICES</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <h3 class="service-card-title">Brand Strategy</h3>
+                <p class="service-card-description">We develop comprehensive brand strategies that define your positioning, values, and market differentiation. Our process includes market research, competitive analysis, and strategic planning.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <h3 class="service-card-title">Visual Identity</h3>
+                <p class="service-card-description">From logo design to complete visual systems, we create distinctive brand identities that reflect your company's essence and appeal to your target market with consistency and impact.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <h3 class="service-card-title">Messaging & Copy</h3>
+                <p class="service-card-description">Compelling brand messaging that communicates your value proposition clearly. We craft narratives, taglines, and copy that resonate emotionally with your audience.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-number">04</div>
+                <h3 class="service-card-title">Market Positioning</h3>
+                <p class="service-card-description">We analyze market trends and consumer behavior to position your brand strategically. Creating unique market opportunities and identifying growth channels for maximum reach.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-number">05</div>
+                <h3 class="service-card-title">Brand Guidelines</h3>
+                <p class="service-card-description">Complete brand guidelines ensuring consistency across all touchpoints. We document design standards, usage rules, and brand voice to maintain brand integrity over time.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-number">06</div>
+                <h3 class="service-card-title">Digital Presence</h3>
+                <p class="service-card-description">Strategic digital transformation services that extend your brand into online spaces. Website design, social media strategy, and digital marketing integration for holistic brand presence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="process-container">
+            <h2 class="process-title">OUR PROCESS</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Discovery</h3>
+                    <p class="step-description">We immerse ourselves in your business, understanding your goals, market, and audience through comprehensive research and stakeholder interviews.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Strategy</h3>
+                    <p class="step-description">Based on insights, we develop a strategic roadmap defining your brand positioning, messaging framework, and creative direction.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Design</h3>
+                    <p class="step-description">Our creative team designs visual identity systems, brand assets, and marketing collateral that bring your strategy to life with impact and consistency.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Implementation</h3>
+                    <p class="step-description">We guide you through implementation across all channels, ensuring brand consistency and providing training for your team to maintain brand integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-heading">READY TO BUILD YOUR BRAND?</h2>
+        <a href="contact.html" class="cta-button">GET IN TOUCH</a>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.includes('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href.split('#')[1] ? '#' + href.split('#')[1] : null);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Add scroll event listener for nav background
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+      <script>
+  // This function fetches the header and footer
+  function loadComponent(id, path) {
+    fetch(path)
+      .then(response => {
+        if (!response.ok) throw new Error("Could not find the file: " + path);
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  }
+
+  // Execute the loading
+  loadComponent('header-placeholder', '../includes/header.html');
+  loadComponent('footer-placeholder', '../includes/footer.html');
+</script>
+</body>
+</html>

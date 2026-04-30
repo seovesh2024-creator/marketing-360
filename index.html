@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing 360 - Best Digital Marketing in Nepal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+   <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="work">
+        <h1>Digital Marketing</h1>
+        <div class="hero-divider"></div>
+        <div class="hero-metadata">
+            <div class="hero-location">
+                <span style="display: block;">BASED IN</span>
+                <span style="display: block; margin-top: 8px;">KATHMANDU, NEPAL</span>
+            </div>
+            <div class="scroll-indicator">
+                <svg viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <path id="circlePath" d="M 72, 72 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" fill="none"/>
+                    </defs>
+                    <text font-family="Space Mono" font-size="9" font-weight="bold" letter-spacing="-0.02em" fill="#000000" text-anchor="middle">
+                        <textPath href="#circlePath" startOffset="0%">
+                            SCROLL DOWN • SCROLL DOWN • SCROLL DOWN • 
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="scroll-indicator-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="hero-role">
+                <span style="display: block;">DESIGN &</span>
+                <span style="display: block;">CREATIVE</span>
+                <span style="display: block; margin-top: 8px;">STUDIO</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section" id="services">
+        <div class="marquee-section-inner">
+            <div class="marquee-row orange">
+                <span class="marquee-text">CREATIVE • CAMPAIGN • DIGITAL • </span>
+                <span class="marquee-text">CREATIVE • CAMPAIGN • DIGITAL • </span>
+                <span class="marquee-text">CREATIVE • CAMPAIGN • DIGITAL • </span>
+            </div>
+            <div class="marquee-row white reverse">
+                <span class="marquee-text">PRODUCTION • MARKET • IMPACT • </span>
+                <span class="marquee-text">PRODUCTION • MARKET • IMPACT • </span>
+                <span class="marquee-text">PRODUCTION • MARKET • IMPACT • </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="services-container">
+            <ul class="services-list">
+                <li>
+                    <span class="service-index">01</span>
+                    <div class="service-content">
+                        <h3 class="service-title">DESIGN STRATEGY</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">BRANDING</span>
+                            <span class="service-tag">CREATIVE</span>
+                            <span class="service-tag">TVCs</span>
+                        </div>
+                    </div>
+                    <div class="service-arrow">→</div>
+                </li>
+                <li>
+                    <span class="service-index">02</span>
+                    <div class="service-content">
+                        <h3 class="service-title">DEVELOPMENT</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">FRONTEND</span>
+                            <span class="service-tag">ANIMATION/MOTION</span>
+                            <span class="service-tag">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="service-arrow">→</div>
+                </li>
+                <li>
+                    <span class="service-index">03</span>
+                    <div class="service-content">
+                        <h3 class="service-title">PAY PER CLICK</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">ADVERSTISING</span>
+                            <span class="service-tag">META/GOOGLE</span>
+                            <span class="service-tag">SALES</span>
+                        </div>
+                    </div>
+                    <div class="service-arrow">→</div>
+                </li>
+                <li>
+                    <span class="service-index">04</span>
+                    <div class="service-content">
+                        <h3 class="service-title">SEO</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">TECHNICAL</span>
+                            <span class="service-tag">AUTHORITY</span>
+                            <span class="service-tag">RANKING</span>
+                        </div>
+                    </div>
+                    <div class="service-arrow">→</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-heading">LET'S BUILD SOMETHING BOLD</h2>
+        <a href="contact.html" class="cta-button">GET IN TOUCH</a>
+    </section>
+
+<div id="footer-placeholder"></div>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add scroll event listener for parallax or other effects if needed
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+    <script>
+  // This function fetches the header and footer
+  function loadComponent(id, path) {
+    fetch(path)
+      .then(response => {
+        if (!response.ok) throw new Error("Could not find the file: " + path);
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  }
+
+  // Execute the loading
+  loadComponent('header-placeholder', 'includes/header.html');
+  loadComponent('footer-placeholder', 'includes/footer.html');
+</script>
+</body>
+</html>

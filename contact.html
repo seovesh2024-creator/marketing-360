@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - M360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+   <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero hero--primary">
+        <h1 class="hero__title">GET IN TOUCH</h1>
+        <p class="hero__subtitle">LET'S DISCUSS YOUR NEXT BIG IDEA AND CREATE SOMETHING EXTRAORDINARY TOGETHER</p>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="section section--dark" id="contact-info">
+        <div class="container grid grid--auto">
+            <div class="card card--white">
+                <label class="card__label">PHONE</label>
+                <div class="card__content">
+                    <a href="tel:+9779767287007">+977 976 7287007</a>
+                </div>
+            </div>
+            <div class="card card--white">
+                <label class="card__label">EMAIL</label>
+                <div class="card__content">
+                    <a href="mailto:info@marketing360.com.np">INFO@<br>MARKETING360.COM.NP</a>
+                </div>
+            </div>
+            <div class="card card--white">
+                <label class="card__label">ADDRESS</label>
+                <div class="card__content">
+                    JAWLAKHEL<br>LALITPUR<br>NEPAL
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section--light">
+        <div class="container">
+            <h2 class="archivo-black" style="font-size: 10vw; margin-bottom: 60px; text-align: center;">FAQ</h2>
+            <div id="faq-container" style="max-width: 800px; margin: 0 auto;"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--primary">
+        <div class="container" style="text-align: center;">
+            <h2 class="archivo-black" style="font-size: 12vw; margin-bottom: 40px;">READY TO START?</h2>
+            <p class="space-mono" style="font-size: 14px; text-transform: uppercase; margin-bottom: 40px; color: var(--color-dark);">Let's schedule a no-pressure consultation to explore your vision</p>
+            <button class="button button--dark" onclick="util.scrollTo('#contact-info')">SCHEDULE A CALL</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        /* ============================================
+           UTILITY FUNCTIONS
+           ============================================ */
+        const util = {
+            // Smooth scroll to element
+            scrollTo(selector) {
+                const element = document.querySelector(selector);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            },
+
+            // Toggle class on element
+            toggleClass(element, className) {
+                element.classList.toggle(className);
+            },
+
+            // Add event listener with handler
+            on(selector, event, handler) {
+                document.addEventListener(event, (e) => {
+                    if (e.target.matches(selector)) {
+                        handler.call(e.target, e);
+                    }
+                });
+            },
+
+            // Query selector wrapper
+            query(selector) {
+                return document.querySelector(selector);
+            },
+
+            // Query selector all wrapper
+            queryAll(selector) {
+                return document.querySelectorAll(selector);
+            }
+        };
+
+        /* ============================================
+           ACCORDION COMPONENT LOGIC
+           ============================================ */
+        const accordion = {
+            // FAQ data (can be easily modified or loaded from API)
+            items: [
+                {
+                    question: "WHAT IS YOUR TYPICAL PROJECT TIMELINE?",
+                    answer: "Most projects range from 4-12 weeks depending on scope and complexity. We'll establish a detailed timeline during our initial consultation, with regular milestones and check-ins to ensure transparency and alignment with your goals."
+                },
+                {
+                    question: "DO YOU OFFER ONGOING SUPPORT AND MAINTENANCE?",
+                    answer: "Yes, we offer comprehensive post-launch support packages including bug fixes, updates, performance optimization, and feature enhancements. Custom maintenance plans can be tailored to your specific needs and budget."
+                },
+                {
+                    question: "WHAT INDUSTRIES DO YOU SPECIALIZE IN?",
+                    answer: "We work with startups, tech companies, creative agencies, and established brands across various sectors. Our brutalist design approach is particularly effective for tech, design, and digital-first brands, but we adapt to any industry's needs."
+                },
+                {
+                    question: "HOW DO YOU HANDLE REVISIONS AND FEEDBACK?",
+                    answer: "We build feedback loops into every phase of development. You'll have regular reviews, and we include multiple revision rounds in our standard packages. We maintain open communication through scheduled calls and project management tools."
+                },
+                {
+                    question: "WHAT ARE YOUR PRICING MODELS?",
+                    answer: "We offer flexible engagement models: fixed-price projects for clearly scoped work, time-and-materials for evolving projects, and retainer agreements for ongoing collaboration. Let's discuss what works best for your project and budget."
+                },
+                {
+                    question: "CAN YOU WORK WITH MY EXISTING TEAM?",
+                    answer: "Absolutely. We're experienced collaborators who integrate seamlessly with existing teams. Whether you need full project ownership or supplementary expertise, we adapt to your workflow and processes."
+                }
+            ],
+
+            // Render accordion from data
+            render() {
+                const container = util.query('#faq-container');
+                container.innerHTML = this.items.map((item, index) => `
+                    <div class="accordion__item" data-index="${index}">
+                        <div class="accordion__header">
+                            <span>${item.question}</span>
+                            <span class="accordion__toggle">+</span>
+                        </div>
+                        <div class="accordion__content">${item.answer}</div>
+                    </div>
+                `).join('');
+
+                this.attachListeners();
+            },
+
+            // Attach click listeners
+            attachListeners() {
+                util.queryAll('.accordion__item').forEach(item => {
+                    item.addEventListener('click', () => this.toggle(item));
+                });
+            },
+
+            // Toggle accordion item
+            toggle(element) {
+                util.queryAll('.accordion__item').forEach(item => {
+                    if (item !== element) {
+                        item.classList.remove('active');
+                    }
+                });
+                element.classList.toggle('active');
+            }
+        };
+
+        /* ============================================
+           NAVIGATION SCROLL EFFECT
+           ============================================ */
+        const nav = {
+            element: util.query('nav'),
+
+            init() {
+                window.addEventListener('scroll', () => this.updateBackground());
+            },
+
+            updateBackground() {
+                const opacity = window.scrollY > 100 ? 0.98 : 0.95;
+                this.element.style.background = `rgba(255, 255, 255, ${opacity})`;
+            }
+        };
+
+        /* ============================================
+           INITIALIZATION
+           ============================================ */
+        document.addEventListener('DOMContentLoaded', () => {
+            accordion.render();
+            nav.init();
+        });
+    </script>
+    <script>
+  // This function fetches the header and footer
+  function loadComponent(id, path) {
+    fetch(path)
+      .then(response => {
+        if (!response.ok) throw new Error("Could not find the file: " + path);
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  }
+
+  // Execute the loading
+  loadComponent('header-placeholder', 'includes/header.html');
+  loadComponent('footer-placeholder', 'includes/footer.html');
+</script>
+</body>
+</html>
