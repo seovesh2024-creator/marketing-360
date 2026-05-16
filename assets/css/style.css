@@ -191,7 +191,7 @@
         }
 
         .hero h1 {
-            font-size: 16vw;
+            font-size: 14vw;
             color: #000000;
             line-height: 0.85;
             margin-bottom: 60px;
@@ -757,7 +757,7 @@
         }
 
         .hero h1 {
-            font-size: 16vw;
+            font-size: 14vw;
             color: #000000;
             line-height: 0.85;
             margin-bottom: 60px;
@@ -1141,7 +1141,7 @@
             /* Fonts */
             --font-archivo: 'Archivo Black', sans-serif;
             --font-mono: 'Space Mono', monospace;
-            --font-Archivo Black: 'Archivo Black', sans-serif;
+            --font-archivo-black: 'Archivo Black', sans-serif;
             
             /* Spacing */
             --spacing-xs: 12px;
@@ -1180,7 +1180,7 @@
         }
 
         body {
-            font-family: var(--font-Archivo Black);
+            font-family: var(--font-archivo-black);
             color: var(--color-dark);
             background-color: var(--color-light);
             overflow-x: hidden;
@@ -1484,7 +1484,7 @@
         }
 
         .accordion__content {
-            font-family: var(--font-Archivo Black);
+            font-family: var(--font-archivo-black);
             font-size: 16px;
             line-height: var(--line-height-relaxed);
             color: var(--color-dark);
@@ -1726,7 +1726,7 @@
         }
 
         .hero h1 {
-            font-size: 16vw;
+            font-size: 14vw;
             color: #000000;
             line-height: 0.85;
             margin-bottom: 60px;
@@ -2389,7 +2389,7 @@
         }
 
         .hero h1 {
-            font-size: 16vw;
+            font-size: 14vw;
             color: #000000;
             line-height: 0.85;
             margin-bottom: 60px;
@@ -2932,7 +2932,7 @@
         }
 
         .hero h1 {
-            font-size: 16vw;
+            font-size: 14vw;
             color: #000000;
             line-height: 0.85;
             margin-bottom: 60px;
@@ -3541,7 +3541,7 @@
         }
 
         .hero h1 {
-            font-size: 16vw;
+            font-size: 14vw;
             color: #000000;
             line-height: 0.85;
             margin-bottom: 60px;
@@ -4204,7 +4204,7 @@
         }
 
         .hero h1 {
-            font-size: 16vw;
+            font-size: 14vw;
             color: #000000;
             line-height: 0.85;
             margin-bottom: 60px;
